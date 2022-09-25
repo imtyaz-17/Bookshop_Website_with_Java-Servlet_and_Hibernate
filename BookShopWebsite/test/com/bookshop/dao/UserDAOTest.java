@@ -77,7 +77,7 @@ public class UserDAOTest {
 	@Test
 	public void testDeleteUsers() {
 		
-		Integer userId = 2;
+		Integer userId = 3;
 		userDAO.delete(userId);
 		
 		Users user = userDAO.get(userId);
