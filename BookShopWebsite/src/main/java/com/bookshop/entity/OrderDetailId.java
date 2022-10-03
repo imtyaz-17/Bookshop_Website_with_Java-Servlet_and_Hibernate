@@ -72,6 +72,4 @@ public class OrderDetailId implements java.io.Serializable {
 		return true;
 	}
 	
-	
-
 }

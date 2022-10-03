@@ -1,5 +1,4 @@
 package com.bookshop.entity;
-// Generated Oct 22, 2019 9:28:12 PM by Hibernate Tools 5.2.12.Final
 
 import java.util.Date;
 import javax.persistence.Column;
@@ -26,7 +25,11 @@ import javax.persistence.Transient;
 	@NamedQuery(name = "Review.listAll", query = "SELECT r FROM Review r ORDER BY r.reviewTime DESC"),
 	@NamedQuery(name = "Review.countAll", query = "SELECT COUNT(r) FROM Review r"),
 	@NamedQuery(name = "Review.findByCustomerAndBook", query = "SELECT r FROM Review r WHERE r.customer.customerId =:customerId"
-			+ " AND r.book.bookId =:bookId")
+			+ " AND r.book.bookId =:bookId"),
+	@NamedQuery(name = "Review.mostFavoredBooks",
+	query = "SELECT r.book, COUNT(r.book.bookId) AS ReviewCount, AVG(r.rating) as AvgRating FROM Review r "
+			+ "GROUP BY r.book.bookId HAVING AVG(r.rating) >= 4.0 "
+			+ "ORDER BY ReviewCount DESC, AvgRating DESC")
 })
 public class Review implements java.io.Serializable {
 

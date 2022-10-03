@@ -33,17 +33,22 @@ public class HomeServlet extends HttpServlet {
 	 *      response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-
+			throws ServletException, IOException {		
+		
 		BookDAO bookDAO = new BookDAO();
+		
 		List<Book> listNewBooks = bookDAO.listNewBooks();
+		List<Book> listBestSellingBooks = bookDAO.listBestSellingBooks();
+		List<Book> listFavoredBooks = bookDAO.listMostFavoredBooks();
+		
 		request.setAttribute("listNewBooks", listNewBooks);
-
+		request.setAttribute("listBestSellingBooks", listBestSellingBooks);
+		request.setAttribute("listFavoredBooks", listFavoredBooks);
+		
 		String homepage = "frontend/index.jsp";
-
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher(homepage);
+		RequestDispatcher dispatcher = request.getRequestDispatcher(homepage);
 		System.out.println("***********Now I'm in Home Page***************");
-		requestDispatcher.forward(request, response);
+		dispatcher.forward(request, response);
 	}
 
 }

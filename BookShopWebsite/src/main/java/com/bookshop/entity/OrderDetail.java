@@ -100,5 +100,4 @@ public class OrderDetail implements java.io.Serializable {
 	public void setSubtotal(float subtotal) {
 		this.subtotal = subtotal;
 	}	
-
 }

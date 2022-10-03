@@ -4,7 +4,7 @@
 <div align="center">
 	<div>
 		<a href="${pageContext.request.contextPath}/admin/">
-			<img alt="" src="../images/BookstoreAdminLogo.png">
+			<img alt="" src="../images/AmarBoiAdminLogo.png">
 		</a>
 	</div>
 	<div>
@@ -21,13 +21,13 @@
 				<a href="list_books"><img src="../images/books.png"><br/>Books</a>
 			</div>
 			<div>
-				<a href="list_customers"><img src="../images/customer.png"><br/>Customers</a>
+				<a href="list_customer"><img src="../images/customer.png"><br/>Customers</a>
 			</div>
 			<div>
-				<a href="list_reviews"><img src="../images/reviews.png"><br/>Reviews</a>
+				<a href="list_review"><img src="../images/reviews.png"><br/>Reviews</a>
 			</div>
 			<div>
-				<a href="orders"><img src="../images/orders.png"><br/>Orders</a>
+				<a href="list_order"><img src="../images/orders.png"><br/>Orders</a>
 			</div>
 		</div>
 </div>
