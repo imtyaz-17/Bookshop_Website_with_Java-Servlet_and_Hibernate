@@ -80,15 +80,15 @@ public class OrderServices {
 
 	public void placeOrder() throws ServletException, IOException {
 		String paymentMethod = request.getParameter("paymentMethod");
-		BookOrder order = readOrderInfo();
+//		BookOrder order = readOrderInfo();
 		
-		if (paymentMethod.equals("paypal")) {
-			PaymentServices paymentServices = new PaymentServices(request, response);
-			request.getSession().setAttribute("order4Paypal", order);
-			paymentServices.authorizePayment(order);
-		} else {	// Cash on Delivery
-			placeOrderCOD(order);
-		}			
+//		if (paymentMethod.equals("paypal")) {
+//			PaymentServices paymentServices = new PaymentServices(request, response);
+//			request.getSession().setAttribute("order4Paypal", order);
+//			paymentServices.authorizePayment(order);
+//		} else {	// Cash on Delivery
+//			placeOrderCOD(order);
+//		}			
 	}
 	
 //	public Integer placeOrderPaypal(Payment payment) {
