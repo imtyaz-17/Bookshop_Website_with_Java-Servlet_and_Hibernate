@@ -10,6 +10,9 @@
 </head>
 <body>
 	<div align="center">
+	<a href="${pageContext.request.contextPath}/admin/">
+			<img alt="" src="../images/AmarBoiAdminLogo.png">
+	</a>
 		<h1>Aamar Boi - Administration</h1>
 		<h2>Admin Login</h2>
 		
